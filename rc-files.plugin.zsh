@@ -1,8 +1,9 @@
 #!/usr/bin/zsh
 
 function zshrc() {
-    $EDITOR "${HOME}/.zshrc" && \
-    source "${HOME}/.zshrc";
+    $EDITOR "${HOME}/.zshrc";
+    # BUG: no reload, interferes with .zinit
+    # for some reason it places writes an empty ~/.zinit into the cwd
 }
 
 function tridactylrc() {
